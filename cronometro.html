@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Cronómetro</title>
+<link rel="stylesheet" type="text/css" href="cronometro.css">
+<style>
+</style>
+</head>
+<body id="light">
+    <div id="cronometro">
+    <h1 id="counter">00:00:00</h1>
+    <button id="iniciar" class="botonCron"  onclick="comenzar();">Iniciar</button>
+    <button id="pausar" class="botonCron"  onclick="pausa();">Pausar</button>
+    <button id="parar" class="botonCron" onclick="parar();">Parar</button>
+    <input type="button" id="buttonDark" onclick="temaDark();" value="Dark Mode"/>
+    <p id ="intervalos"></p>
+    </div>
+    <script src="cron.js"></script>
+</body>
+</html>

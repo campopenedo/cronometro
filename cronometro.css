@@ -1,0 +1,126 @@
+#light{
+    background-color: #354e71;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    transition: 0.75s;
+}
+
+.botonCron{
+    background: #bada55;
+    width: 180px;
+    border: 6px solid black;
+    border-style: double;
+    border-radius: 30px;
+    vertical-align: middle;
+    font: 25px solid Helvetica, sans-sheriff;
+    padding: 0px;
+}
+
+#cambiarTema{
+    position:static;
+    width: 100px;
+    height: 25px;
+    margin-left: 220px;
+    margin-top: 10px;
+    background-color: #151f2d;
+    border: none;
+    border-radius: 30px;
+    font: 12px solid Helvetica, sans-sheriff;
+    color: #ff3232;
+}
+
+#cronometro{
+    position:fixed;
+    width: 551px;
+    top:20%;
+    left: 40%;
+    margin-left:-225px;
+}
+
+#intervalos{
+    text-align: center;
+    color: white;
+    font: 35px solid helvetica;
+    margin-bottom: 0px;
+}
+
+/* Dark mode :B */
+#dark{
+    background-color: #151f2d;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    transition: 0.75s;
+}
+
+#buttonDark{
+    position:static;
+    width: 100px;
+    height: 25px;
+    margin-left: 220px;
+    margin-top: 10px;
+    background-color: #151f2d;
+    border: none;
+    border-radius: 30px;
+    font: 12px solid Helvetica, sans-sheriff;
+    color: #ff3232;
+}
+
+#counterDark{
+    text-align: center;
+    color: #ff3232;
+    font: 95px solid helvetica;
+    margin-bottom: 0px;
+}
+
+/* Light mode @:) */
+#light{
+    background-color: #354e71;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    transition: 0.75s;
+}
+
+#buttonLight{
+    position:static;
+    width: 100px;
+    height: 25px;
+    margin-left: 220px;
+    margin-top: 10px;
+    background-color: #354e71;
+    border: none;
+    border-radius: 30px;
+    font: 12px solid Helvetica, sans-sheriff;
+    color: white;
+}
+
+#counter{
+    text-align: center;
+    color: white;
+    font: 95px solid helvetica;
+    margin-bottom: 0px;
+}
+
+
+
+@media screen and (max-width: 600px) and (min-width: 0px){
+
+    .botonCron{
+        display: fixed;
+        flex-direction: column;
+        background: #bada55;
+        width: 250px;
+        border: 5px solid black;
+        border-style: double;
+        border-radius: 30px;
+        font: 25px solid Helvetica, sans-sheriff;
+        padding: 0px;
+        margin-left: 145px;
+        margin-top: 20px;
+}
+    #cronometro{
+        top: 0%;
+    }
+}
