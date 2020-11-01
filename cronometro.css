@@ -17,6 +17,17 @@
     padding: 0px;
 }
 
+.botonCronActivo{
+    background: #00FF00;
+    width: 180px;
+    border: 6px solid black;
+    border-style: double;
+    border-radius: 30px;
+    vertical-align: middle;
+    font: 25px solid Helvetica, sans-sheriff;
+    padding: 0px;
+}
+
 #cambiarTema{
     position:static;
     width: 100px;

@@ -24,12 +24,18 @@ let horasUltimoIntervalo;
 
 
 function comenzar(){
+    document.getElementById("iniciar").className="botonCronActivo"
+    document.getElementById("pausar").className="botonCron"
     if(activo == 0){
-    cron = setInterval(() => {timer();}, tempo);
+    cron = setInterval(timer, tempo);
+    document.getElementById("iniciar").className=="botonCron"
     activo++;
     }
 }
 function pausa(){
+    document.getElementById("pausar").className="botonCronActivo"
+    document.getElementById("iniciar").className="botonCron"
+
     if(tiempoAcumHor != hh || tiempoAcumMin != mm || tiempoAcumSeg != ss){
     clearInterval(cron);
     tiempoAcumulado();
@@ -57,18 +63,21 @@ function parar(){
     tiempoAcumHor = 0;
     document.getElementById('counter').innerText = '00:00:00'
     document.getElementById('intervalos').innerText="";
+    document.getElementById("iniciar").className="botonCron"
+    document.getElementById("pausar").className="botonCron"
+    document.getElementById("parar").className="botonCron"
+
     inter = [];
     activo = 0;
     
 }
 
 function tiempoAcumulado(){
-    inter.unshift([`Intervalo ${inter.length + 1}:`, `${(hh < 10 ? '0' + hh : hh)}`, `${(mm < 10 ? '0' + mm : mm)}`,`${(ss < 10 ? '0' + ss : ss)}`]);
+    inter.unshift([`${(hh < 10 ? '0' + hh : hh)}`, `${(mm < 10 ? '0' + mm : mm)}`,`${(ss < 10 ? '0' + ss : ss)}`]);
 
 function tiempoIntervalo(){
-    
         if(inter.length > 1){
-        segundosUltimoIntervalo = segundosTotales - ((Number(inter[1][1]) * 3600) + (Number(inter[1][2]) * 60) + Number(inter[1][3]));
+        segundosUltimoIntervalo = segundosTotales - ((Number(inter[1][0]) * 3600) + (Number(inter[1][1]) * 60) + Number(inter[1][2]));
         minutosUltimoIntervalo = Math.trunc(segundosUltimoIntervalo / 60);
         horasUltimoIntervalo = Math.trunc(segundosUltimoIntervalo / 3600);
         hhI = horasUltimoIntervalo;
@@ -83,7 +92,7 @@ function tiempoIntervalo(){
 
 function añadirTextoInter(){
     for(let i = 0; i < inter.length; i++){
-      textoIntervalos += `${inter[i][0]} ${inter[i][4]} \n`;
+      textoIntervalos += `Intervalo ${inter.length-i}: ${inter[i][3]} \n`;
     }
 }
     tiempoIntervalo();
@@ -91,9 +100,9 @@ function añadirTextoInter(){
 }
 
 function tiempoAcumuladoTotal(){
-    tiempoAcumSeg += Number(inter[0][4].slice(6,8));
-    tiempoAcumMin += Number(inter[0][4].slice(3,5));
-    tiempoAcumHor += Number(inter[0][4].slice(0,2));
+    tiempoAcumSeg += Number(inter[0][3].slice(6,8));
+    tiempoAcumMin += Number(inter[0][3].slice(3,5));
+    tiempoAcumHor += Number(inter[0][3].slice(0,2));
 }
 
 function timer(){
