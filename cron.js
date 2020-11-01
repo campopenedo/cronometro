@@ -24,15 +24,17 @@ let horasUltimoIntervalo;
 
 
 function comenzar(){
+    // Al iniciar, cambiamos el color del boton de iniciar (se activa) y desactivamos el de pausar
     document.getElementById("iniciar").className="botonCronActivo"
     document.getElementById("pausar").className="botonCron"
     if(activo == 0){
-    cron = setInterval(timer, tempo);
-    document.getElementById("iniciar").className=="botonCron"
-    activo++;
+        // Simplifico la llamada
+        cron = setInterval(timer, tempo);
+        activo++;
     }
 }
 function pausa(){
+    // Al pausar, cambiamos el color del botón pausar (se activa) e iniciar (se desactiva)
     document.getElementById("pausar").className="botonCronActivo"
     document.getElementById("iniciar").className="botonCron"
 
@@ -63,6 +65,7 @@ function parar(){
     tiempoAcumHor = 0;
     document.getElementById('counter').innerText = '00:00:00'
     document.getElementById('intervalos').innerText="";
+    // Se desactivan los tres botones
     document.getElementById("iniciar").className="botonCron"
     document.getElementById("pausar").className="botonCron"
     document.getElementById("parar").className="botonCron"
@@ -73,6 +76,7 @@ function parar(){
 }
 
 function tiempoAcumulado(){
+    // Elimino el primer elemento
     inter.unshift([`${(hh < 10 ? '0' + hh : hh)}`, `${(mm < 10 ? '0' + mm : mm)}`,`${(ss < 10 ? '0' + ss : ss)}`]);
 
 function tiempoIntervalo(){
@@ -92,6 +96,7 @@ function tiempoIntervalo(){
 
 function añadirTextoInter(){
     for(let i = 0; i < inter.length; i++){
+      // Añado el elemento eliminado de forma inteligente 
       textoIntervalos += `Intervalo ${inter.length-i}: ${inter[i][3]} \n`;
     }
 }
@@ -100,6 +105,7 @@ function añadirTextoInter(){
 }
 
 function tiempoAcumuladoTotal(){
+    // Reajustamos el array
     tiempoAcumSeg += Number(inter[0][3].slice(6,8));
     tiempoAcumMin += Number(inter[0][3].slice(3,5));
     tiempoAcumHor += Number(inter[0][3].slice(0,2));
