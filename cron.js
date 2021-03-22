@@ -128,14 +128,29 @@ function timer(){
 }
 
 function temaDark(){
-    if(document.getElementById("light")){
+    if(document.getElementById("buttonDark")){
         document.getElementById("light").id= "dark";
         document.getElementById("buttonDark").value="Light Mode";
         document.getElementById("buttonDark").id = "buttonLight";
-    }else{
+        console.log("hola");
+    }else if(document.getElementById("buttonLight")){
     document.getElementById("dark").id= "light"; 
     document.getElementById("buttonLight").value="Dark Mode";
     document.getElementById("buttonLight").id= "buttonDark"
         
     }
 }
+
+document.addEventListener("click", e=>{
+    if(e.target.id === "iniciar") comenzar();
+    if(e.target.id === "pausar") pausa();
+    if(e.target.id === "parar") parar();
+    if(e.target.id === "cambiarTema"){
+        document.body.classList.toggle("dark");
+        e.target.classList.toggle("buttonLight");
+        e.target.classList.toggle("buttonDark");
+        e.target.value = (e.target.classList[0] === "buttonLight"
+        ? "Light Mode"
+        : "Dark Mode");
+    };
+})
