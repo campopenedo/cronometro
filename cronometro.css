@@ -4,44 +4,61 @@ body{
     height: 100%;
     margin: 0;
     transition: 0.75s;
+    display:flex;
+    justify-content: center;
 }
 
 .botonCron{
     background: #bada55;
-    width: 180px;
+    width: 30%;
     border: 6px solid black;
     border-style: double;
     border-radius: 30px;
     vertical-align: middle;
-    font: 25px solid Helvetica, sans-sheriff;
-    padding: 0px;
+    font: 120% solid Helvetica, sans-sheriff;
+}
+
+.botonCron:active{
+    width: 29.8%;
+    margin-left:0.2%;
 }
 
 .botonCronActivo{
-    background: #00FF00;
-    width: 180px;
+    background: #778b36;
+    width: 30%;
     border: 6px solid black;
     border-style: double;
     border-radius: 30px;
     vertical-align: middle;
-    font: 25px solid Helvetica, sans-sheriff;
+    font: 120% solid Helvetica, sans-sheriff;
     padding: 0px;
 }
 
 #cronometro{
-    position:fixed;
-    width: 551px;
-    top:20%;
-    left: 40%;
-    margin-left:-225px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    width: 40%;
+}
+
+#botones{
+    display:flex;
+    justify-content:center;
+}
+
+#cambioTema{
+    width: 8vw;
+    padding-top: 1%;
+    align-self: center;
 }
 
 #intervalos{
     text-align: center;
     color: white;
-    font: 35px solid helvetica;
-    margin-bottom: 0px;
+    font: 180% solid helvetica;
+
 }
+
 
 /* Dark mode :B */
 .dark{
@@ -53,65 +70,48 @@ body{
 }
 
 .buttonDark{
-    position:static;
-    width: 100px;
-    height: 25px;
-    margin-left: 220px;
-    margin-top: 10px;
+    width: 8vw;
+    height: 2vw;
     background-color: #151f2d;
     border: none;
     border-radius: 30px;
-    font: 12px solid Helvetica, sans-sheriff;
+    font: 85% solid Helvetica, sans-sheriff;
     color: #ff3232;
-}
-
-#counterDark{
-    text-align: center;
-    color: #ff3232;
-    font: 95px solid helvetica;
-    margin-bottom: 0px;
 }
 
 /* Light mode @:) */
 
 .buttonLight{
-    position:static;
-    width: 100px;
-    height: 25px;
-    margin-left: 220px;
-    margin-top: 10px;
+    width: 8vw;
+    height: 2vw;
     background-color: #354e71;
     border: none;
     border-radius: 30px;
-    font: 12px solid Helvetica, sans-sheriff;
+    font: 85% solid Helvetica, sans-sheriff;
     color: white;
 }
 
 #counter{
     text-align: center;
     color: white;
-    font: 95px solid helvetica;
+    font: 7vw solid helvetica;
     margin-bottom: 0px;
 }
 
-
-
-@media screen and (max-width: 600px) and (min-width: 0px){
-
-    .botonCron{
-        display: fixed;
+@media screen and (max-width: 900px) and (min-width: 0px){
+    #botones{
         flex-direction: column;
-        background: #bada55;
-        width: 250px;
-        border: 5px solid black;
-        border-style: double;
-        border-radius: 30px;
-        font: 25px solid Helvetica, sans-sheriff;
-        padding: 0px;
-        margin-left: 145px;
-        margin-top: 20px;
-}
-    #cronometro{
-        top: 0%;
+    }
+    #botones button{
+        width: 100%;
+    }
+    #cambioTema{
+        width: 20vw;
+        height: 5vh;
+        justify-content: center;;
+    }
+    #cambiarTema{
+        width: 20vw;
+        height: 5vh;
     }
 }

@@ -8,14 +8,18 @@
 </style>
 </head>
 <body>
-    <div id="cronometro">
+    <section id="cronometro">
     <h1 id="counter">00:00:00</h1>
-    <button id="iniciar" class="botonCron"  onclick="comenzar();">Iniciar</button>
-    <button id="pausar" class="botonCron">Pausar</button>
-    <button id="parar" class="botonCron">Parar</button>
-    <input type="button" id="cambiarTema" class="buttonDark" value="Dark Mode"/>
+    <section id="botones">
+        <button id="iniciar" class="botonCron"  onclick="comenzar();">Iniciar</button>
+        <button id="pausar" class="botonCron">Pausar</button>
+        <button id="parar" class="botonCron">Parar</button>
+    </section>
+    <section id="cambioTema">
+        <input type="button" id="cambiarTema" class="buttonDark" value="Dark Mode"/>
+    </section>
     <p id ="intervalos"></p>
-    </div>
+    </section>
     <script src="cron.js"></script>
 </body>
 </html>
