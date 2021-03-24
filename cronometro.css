@@ -39,6 +39,7 @@ body{
     flex-direction:column;
     justify-content: center;
     width: 40%;
+    min-width: 700px;
 }
 
 #botones{
@@ -47,9 +48,13 @@ body{
 }
 
 #cambioTema{
-    width: 8vw;
+    width: 10vw;
     padding-top: 1%;
     align-self: center;
+}
+
+#cambiarTema{
+    width: 100%;
 }
 
 #intervalos{
@@ -70,7 +75,6 @@ body{
 }
 
 .buttonDark{
-    width: 8vw;
     height: 2vw;
     background-color: #151f2d;
     border: none;
@@ -82,7 +86,6 @@ body{
 /* Light mode @:) */
 
 .buttonLight{
-    width: 8vw;
     height: 2vw;
     background-color: #354e71;
     border: none;
@@ -99,19 +102,35 @@ body{
 }
 
 @media screen and (max-width: 900px) and (min-width: 0px){
+    #counter{
+        font-size: 14vw;
+    }
+    #cronometro{
+        width: 60%;
+        min-width: 200px;
+    }
     #botones{
         flex-direction: column;
     }
     #botones button{
+        margin: 1%;
         width: 100%;
+        height: 6.5vh;
     }
     #cambioTema{
-        width: 20vw;
+        font-size: 5vw;
+        width: 100%;
         height: 5vh;
-        justify-content: center;;
+        justify-content: center;
     }
     #cambiarTema{
-        width: 20vw;
-        height: 5vh;
+        width: 100%;
+        height: 6.5vh;
+    }
+    @media screen and (max-width: 530px) and (min-width: 0px){
+        #intervalos{
+            font-size: 5vw;
+        }
     }
 }
+
