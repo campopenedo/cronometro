@@ -35,10 +35,10 @@ function comenzar(){
 }
 function pausa(){
     // Al pausar, cambiamos el color del botón pausar (se activa) e iniciar (se desactiva)
-    document.getElementById("pausar").className="botonCronActivo"
-    document.getElementById("iniciar").className="botonCron"
-
+    
     if(tiempoAcumHor != hh || tiempoAcumMin != mm || tiempoAcumSeg != ss){
+        document.getElementById("pausar").className="botonCronActivo"
+        document.getElementById("iniciar").className="botonCron"
     clearInterval(cron);
     tiempoAcumulado();
     tiempoAcumuladoTotal();

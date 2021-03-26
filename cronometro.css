@@ -2,10 +2,12 @@ body{
     background-color: #354e71;
     width: 100%;
     height: 100%;
+    position: absolute;
     margin: 0;
     transition: 0.75s;
     display:flex;
     justify-content: center;
+    vertical-align: middle;
 }
 
 .botonCron{
@@ -29,7 +31,6 @@ body{
     border: 6px solid black;
     border-style: double;
     border-radius: 30px;
-    vertical-align: middle;
     font: 120% solid Helvetica, sans-sheriff;
     padding: 0px;
 }
@@ -39,7 +40,8 @@ body{
     flex-direction:column;
     justify-content: center;
     width: 40%;
-    min-width: 700px;
+    min-width: 500px;
+
 }
 
 #botones{
@@ -99,6 +101,7 @@ body{
     color: white;
     font: 7vw solid helvetica;
     margin-bottom: 0px;
+    margin: 0;
 }
 
 @media screen and (max-width: 900px) and (min-width: 0px){
