@@ -59,13 +59,22 @@ body{
     width: 100%;
 }
 
-#intervalos{
+#intervalos, #intervalos-titulo{
     text-align: center;
     color: white;
     font: 180% solid helvetica;
-
 }
 
+#intervalos {
+    height: 20%;
+    border: 1px solid black;
+    overflow-y: scroll;
+}
+
+#intervalos-titulo {
+    padding: 0px;
+    margin: 5% 0px 0px 0px;
+}
 
 /* Dark mode :B */
 .dark{
@@ -129,6 +138,10 @@ body{
     @media screen and (max-width: 530px){
         #intervalos{
             font-size: 5vw;
+        }
+
+        #intervalos-titulo {
+            margin: 2% 0px 0px 0px;
         }
     }
 }
